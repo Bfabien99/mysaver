@@ -32,7 +32,7 @@ class CategoryController extends Controller
                 return back()->withInput()->with('error', 'Slug "' . $req['slug'] . '" exist');
             }
             Category::create($req);
-            return to_route('category');
+            return back()->with('success', 'New category added.');
         } catch (\Throwable $th) {
             return back()->withInput()->with('error', $th->getMessage());
         }
@@ -69,7 +69,7 @@ class CategoryController extends Controller
                 'title'       => $req['title'],
                 'description' => $req['description'],
             ]);
-            return to_route('edit-category', $req['slug']);
+            return to_route('edit-category', $req['slug'])->with('success', 'Category updated.');
         } catch (\Throwable $th) {
             return back()->withInput()->with('error', $th->getMessage());
         }
