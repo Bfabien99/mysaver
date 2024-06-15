@@ -32,6 +32,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/accounts/{account}/edit', [AccountController::class, 'edit'])->name('edit-post-account');
     Route::delete('/accounts/{account}/delete', [AccountController::class, 'delete'])->name('delete-account');
 
-    Route::get('/profil', [UserController::class, 'dashboardPage'])->name('profil');
+    Route::get('/profil', [UserController::class, 'profilPage'])->name('profil');
+    Route::post('/profil/credentials', [UserController::class, 'editCredential'])->name('edit-credentials');
+    Route::post('/profil/password', [UserController::class, 'editPassword'])->name('edit-password');
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
  });
