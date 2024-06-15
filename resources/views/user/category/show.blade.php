@@ -19,5 +19,18 @@
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">{{$category->description}}</p>
             </div>
         </div>
+
+        @if (!empty($category->accounts->toArray()))
+        <div class="mt-5 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700">
+            <h4 class="font-bold my-1 text-lg">Linked Accounts</h4>
+            <div class="flex gap-5 ">
+ @foreach ($category->accounts as $acc)
+                <a href="{{route('show-account', $acc['id'])}}" class="border border-gray-200 rounded-lg flex-1 p-5 hover:bg-gray-100">{{$acc->name}}</a>
+            @endforeach
+            </div>
+           
+        </div>
+        @endif
+    
     </section>
 @endsection

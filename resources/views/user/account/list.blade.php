@@ -11,7 +11,7 @@
         <div class="flex flex-wrap mt-5 gap-5">
             @foreach ($accounts as $account)
                 <a class="block max-w-xs p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100" href="{{route('show-account', $account['id'])}}">
-                    <img src="{{$account['image_url']}}" class="w-full h-96 my-2">
+                    <img src="{{$account['image_url']}}" class="w-full h-52 my-2">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $account['name'] }}</h5>
                 </a>
             @endforeach

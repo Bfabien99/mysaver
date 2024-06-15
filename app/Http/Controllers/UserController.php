@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -9,7 +11,7 @@ class UserController extends Controller
 {
     //
     public function dashboardPage(){
-        return view('user.dashboard');
+        return view('user.dashboard', ['accounts' => Account::latest()->limit(5)->get(), 'categories' => Category::latest()->limit(5)->get()]);
     }
     public function profilPage(){
         return view('user.profil');
