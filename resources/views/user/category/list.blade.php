@@ -12,7 +12,7 @@
                 @foreach ($categories as $cat)
                     <a class="flex gap-4 p-3 border border-slate-500 text-slate-900 hover:bg-gray-200" href="{{ route('show-category', $cat['slug']) }}">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $cat['title'] }}</h5>
-                        <small class="text-red-500">{{ count($cat['accounts']) }}</small>
+                        <small class="text-red-500">{{ count($cat['accounts'])+count($cat['sites'])+count($cat['notes']) }}</small>
                     </a>
                 @endforeach
             </div>

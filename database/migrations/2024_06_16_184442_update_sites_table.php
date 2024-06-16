@@ -11,20 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('accounts', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('url');
-            $table->string('image_url');
-            $table->string('username');
-            $table->string('email');
-            $table->string('phone');
-            $table->string('password');
-            $table->longText('description');
-            $table->longText('more');
+        //
+        Schema::table('sites', function (Blueprint $table) {
             $table->unsignedBigInteger('cat_id')->nullable();
             $table->foreign('cat_id')->references('id')->on('categories')->nullOnDelete();
-            $table->timestamps();
         });
     }
 
@@ -33,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('accounts');
+        //
     }
 };

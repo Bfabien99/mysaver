@@ -26,26 +26,28 @@
                                 @auth()
                                     <a href="{{ route('dashboard') }}"
                                         class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('dashboard') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">dashboard</a>
-                                    </li>
+
+                                    <a href="{{ route('site') }}"
+                                        class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('site') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">site</a>
+                                        <a href="{{ route('note') }}"
+                                        class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('note') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">note</a>
                                     <a href="{{ route('account') }}"
                                         class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('account') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">account</a>
-                                    </li>
+
                                     <a href="{{ route('category') }}"
                                         class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('category') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">category</a>
-                                    </li>
+
                                     <a href="{{ route('profil') }}"
                                         class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('profil') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">profil</a>
-                                    </li>
+
                                     <a href="{{ route('logout') }}"
                                         class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('logout') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">logout</a>
-                                    </li>
                                 @else
                                     <a href="{{ route('login') }}"
                                         class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('login') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">login</a>
-                                    </li>
+
                                     <a href="{{ route('register') }}"
                                         class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('register') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">register</a>
-                                    </li>
                                 @endauth
                             </div>
                         </div>
@@ -94,26 +96,23 @@
                     @auth()
                         <a href="{{ route('dashboard') }}"
                             class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('dashboard') ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">dashboard</a>
-                        </li>
+                            <a href="{{ route('site') }}"
+                                class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('site') ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">site</a>
+                                <a href="{{ route('note') }}"
+                                class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('note') ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">note</a>
                         <a href="{{ route('account') }}"
                             class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('account') ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">account</a>
-                        </li>
                         <a href="{{ route('category') }}"
                             class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('category') ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">category</a>
-                        </li>
                         <a href="{{ route('profil') }}"
                             class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('profil') ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">profil</a>
-                        </li>
                         <a href="{{ route('logout') }}"
                             class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('logout') ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">logout</a>
-                        </li>
                     @else
                         <a href="{{ route('login') }}"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('login') ? 'bg-gray-900 text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">login</a>
-                        </li>
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('login') ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">login</a>
                         <a href="{{ route('register') }}"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('register') ? 'bg-gray-900 text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">register</a>
-                        </li>
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ Route::is('register') ? 'block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white' }}">register</a>
                     @endauth
                 </div>
             </div>
@@ -121,7 +120,7 @@
 
         <header class="bg-white shadow">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{$title ?? 'MySaver'}}</h1>
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $title ?? 'MySaver' }}</h1>
             </div>
         </header>
         <main>
@@ -134,4 +133,5 @@
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+
 </html>

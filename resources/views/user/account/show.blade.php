@@ -5,7 +5,7 @@
             <h3>Information about account</h3>
             <a href="{{ route('create-account') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">add new</a>
         </div>
-        <div class="mt-5 max-w-xl p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="mt-5 max-w-100 overflow-x-auto p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <div class="flex gap-5">
                 <form action="{{ route('delete-account', $account->id) }}" method="POST">
                     @method('DELETE')

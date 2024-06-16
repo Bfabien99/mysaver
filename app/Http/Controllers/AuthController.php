@@ -47,7 +47,7 @@ class AuthController extends Controller
                 return back()->withInput()->with('error', 'An user already exist');
             }
             User::create($req);
-            return to_route('login');
+            return to_route('login')->with('success', 'Login to access your account');
         } catch (\Throwable $th) {
             return back()->withInput()->with('error', $th->getMessage());
         }

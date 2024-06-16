@@ -18,4 +18,12 @@ class Category extends Model
     public function accounts(){
         return $this->hasMany(Account::class, 'cat_id');
     }
+
+    public function notes(){
+        return $this->hasMany(Note::class, 'cat_id');
+    }
+
+    public function sites(){
+        return $this->hasMany(Site::class, 'cat_id');
+    }
 }
